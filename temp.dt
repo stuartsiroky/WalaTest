@@ -1,0 +1,43 @@
+digraph "DirectedGraph" {
+graph [concentrate = true];center=true;fontsize=6;node [ color=blue,shape="box"fontsize=6,fontcolor=black,fontname=Arial];edge [ color=black,fontsize=6,fontcolor=black,fontname=Arial]; 
+   "3 = new <Application,[Ljava/lang/String>@14 \ncom.ibm.wala.FakeRootClass.fakeRootMethod()V" [ ]
+   "5 = new <Primordial,Ljava/lang/String>@2\ncom.ibm.wala.FakeRootClass.fakeRootMethod()V" [ ]
+   "arraystore 3[6] = 5\ncom.ibm.wala.FakeRootClass.fakeRootMethod()V" [ ]
+   "invokespecial < Primordial, Ljava/lang/Object, <init>()V > 3 @4 exception:7\ncom.ibm.wala.FakeRootClass.fakeRootMethod()V" [ ]
+   "invokestatic < Application, LexPkg/MyTest, main([Ljava/lang/String;)V > 3 @5 exception:8\ncom.ibm.wala.FakeRootClass.fakeRootMethod()V" [ ]
+   "METHOD_ENTRY:Node: synthetic < Primordial, Lcom/ibm/wala/FakeRootClass, fakeRootMethod()V > Context: Everywhere" [ ]
+   "3 = new <Application,LexPkg/MyTest>@0\nexPkg.MyTest.main([Ljava/lang/String;)V" [ ]
+   "invokespecial < Application, LexPkg/MyTest, <init>()V > 3 @4 exception:4\nexPkg.MyTest.main([Ljava/lang/String;)V" [ ]
+   "invokevirtual < Application, LexPkg/MyTest, start()V > 3 @9 exception:5\nexPkg.MyTest.main([Ljava/lang/String;)V" [ ]
+   "METHOD_ENTRY:Node: < Application, LexPkg/MyTest, main([Ljava/lang/String;)V > Context: Everywhere" [ ]
+   "3 = new <Application,LexPkg/ABase>@0\nexPkg.MyTest.start()V" [ ]
+   "invokespecial < Application, LexPkg/ABase, <init>()V > 3 @4 exception:4\nexPkg.MyTest.start()V" [ ]
+   "5 = new <Application,LexPkg/Base>@8\nexPkg.MyTest.start()V" [ ]
+   "invokespecial < Application, LexPkg/Base, <init>()V > 5 @12 exception:6\nexPkg.MyTest.start()V" [ ]
+   "invokevirtual < Application, LexPkg/ABase, m1()V > 3 @17 exception:7\nexPkg.MyTest.start()V" [ ]
+   "invokevirtual < Application, LexPkg/Base, m2()V > 5 @21 exception:8\nexPkg.MyTest.start()V" [ ]
+   "METHOD_ENTRY:Node: < Application, LexPkg/MyTest, start()V > Context: Everywhere" [ ]
+ "3 = new <Application,[Ljava/lang/String>@14 \ncom.ibm.wala.FakeRootClass.fakeRootMethod()V" -> "5 = new <Primordial,Ljava/lang/String>@2\ncom.ibm.wala.FakeRootClass.fakeRootMethod()V" 
+ "3 = new <Application,[Ljava/lang/String>@14 \ncom.ibm.wala.FakeRootClass.fakeRootMethod()V" -> "arraystore 3[6] = 5\ncom.ibm.wala.FakeRootClass.fakeRootMethod()V" 
+ "3 = new <Application,[Ljava/lang/String>@14 \ncom.ibm.wala.FakeRootClass.fakeRootMethod()V" -> "invokespecial < Primordial, Ljava/lang/Object, <init>()V > 3 @4 exception:7\ncom.ibm.wala.FakeRootClass.fakeRootMethod()V" 
+ "3 = new <Application,[Ljava/lang/String>@14 \ncom.ibm.wala.FakeRootClass.fakeRootMethod()V" -> "invokestatic < Application, LexPkg/MyTest, main([Ljava/lang/String;)V > 3 @5 exception:8\ncom.ibm.wala.FakeRootClass.fakeRootMethod()V" 
+ "5 = new <Primordial,Ljava/lang/String>@2\ncom.ibm.wala.FakeRootClass.fakeRootMethod()V" -> "arraystore 3[6] = 5\ncom.ibm.wala.FakeRootClass.fakeRootMethod()V" 
+ "arraystore 3[6] = 5\ncom.ibm.wala.FakeRootClass.fakeRootMethod()V" -> "invokespecial < Primordial, Ljava/lang/Object, <init>()V > 3 @4 exception:7\ncom.ibm.wala.FakeRootClass.fakeRootMethod()V" 
+ "invokespecial < Primordial, Ljava/lang/Object, <init>()V > 3 @4 exception:7\ncom.ibm.wala.FakeRootClass.fakeRootMethod()V" -> "invokestatic < Application, LexPkg/MyTest, main([Ljava/lang/String;)V > 3 @5 exception:8\ncom.ibm.wala.FakeRootClass.fakeRootMethod()V" 
+ "invokestatic < Application, LexPkg/MyTest, main([Ljava/lang/String;)V > 3 @5 exception:8\ncom.ibm.wala.FakeRootClass.fakeRootMethod()V" -> "METHOD_ENTRY:Node: < Application, LexPkg/MyTest, main([Ljava/lang/String;)V > Context: Everywhere" 
+ "METHOD_ENTRY:Node: synthetic < Primordial, Lcom/ibm/wala/FakeRootClass, fakeRootMethod()V > Context: Everywhere" -> "3 = new <Application,[Ljava/lang/String>@14 \ncom.ibm.wala.FakeRootClass.fakeRootMethod()V" 
+ "3 = new <Application,LexPkg/MyTest>@0\nexPkg.MyTest.main([Ljava/lang/String;)V" -> "invokespecial < Application, LexPkg/MyTest, <init>()V > 3 @4 exception:4\nexPkg.MyTest.main([Ljava/lang/String;)V" 
+ "3 = new <Application,LexPkg/MyTest>@0\nexPkg.MyTest.main([Ljava/lang/String;)V" -> "invokevirtual < Application, LexPkg/MyTest, start()V > 3 @9 exception:5\nexPkg.MyTest.main([Ljava/lang/String;)V" 
+ "invokespecial < Application, LexPkg/MyTest, <init>()V > 3 @4 exception:4\nexPkg.MyTest.main([Ljava/lang/String;)V" -> "invokevirtual < Application, LexPkg/MyTest, start()V > 3 @9 exception:5\nexPkg.MyTest.main([Ljava/lang/String;)V" 
+ "invokevirtual < Application, LexPkg/MyTest, start()V > 3 @9 exception:5\nexPkg.MyTest.main([Ljava/lang/String;)V" -> "METHOD_ENTRY:Node: < Application, LexPkg/MyTest, start()V > Context: Everywhere" 
+ "METHOD_ENTRY:Node: < Application, LexPkg/MyTest, main([Ljava/lang/String;)V > Context: Everywhere" -> "3 = new <Application,LexPkg/MyTest>@0\nexPkg.MyTest.main([Ljava/lang/String;)V" 
+ "3 = new <Application,LexPkg/ABase>@0\nexPkg.MyTest.start()V" -> "invokespecial < Application, LexPkg/ABase, <init>()V > 3 @4 exception:4\nexPkg.MyTest.start()V" 
+ "3 = new <Application,LexPkg/ABase>@0\nexPkg.MyTest.start()V" -> "invokevirtual < Application, LexPkg/ABase, m1()V > 3 @17 exception:7\nexPkg.MyTest.start()V" 
+ "invokespecial < Application, LexPkg/ABase, <init>()V > 3 @4 exception:4\nexPkg.MyTest.start()V" -> "5 = new <Application,LexPkg/Base>@8\nexPkg.MyTest.start()V" 
+ "5 = new <Application,LexPkg/Base>@8\nexPkg.MyTest.start()V" -> "invokespecial < Application, LexPkg/Base, <init>()V > 5 @12 exception:6\nexPkg.MyTest.start()V" 
+ "5 = new <Application,LexPkg/Base>@8\nexPkg.MyTest.start()V" -> "invokevirtual < Application, LexPkg/Base, m2()V > 5 @21 exception:8\nexPkg.MyTest.start()V" 
+ "invokespecial < Application, LexPkg/Base, <init>()V > 5 @12 exception:6\nexPkg.MyTest.start()V" -> "invokevirtual < Application, LexPkg/ABase, m1()V > 3 @17 exception:7\nexPkg.MyTest.start()V" 
+ "invokevirtual < Application, LexPkg/ABase, m1()V > 3 @17 exception:7\nexPkg.MyTest.start()V" -> "invokevirtual < Application, LexPkg/Base, m2()V > 5 @21 exception:8\nexPkg.MyTest.start()V" 
+ "METHOD_ENTRY:Node: < Application, LexPkg/MyTest, start()V > Context: Everywhere" -> "3 = new <Application,LexPkg/ABase>@0\nexPkg.MyTest.start()V" 
+
+}
